@@ -40,6 +40,7 @@ def group_word(words):
         if word_len not in word_dict:
             word_dict[word_len] = []
         word_dict[word_len].append(word)
+    word_dict.update()
     return word_dict
 
 if __name__ == "__main__":
@@ -51,7 +52,6 @@ if __name__ == "__main__":
     with open("word.txt") as l:
         for g in l:
             words = eval(g)
-            print(words)
-            hh = worlist.append(words)
-    print(group_word(hh))
+            worlist.append(words)
+        print(group_word(worlist))
     pass
